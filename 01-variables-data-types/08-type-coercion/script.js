@@ -23,6 +23,6 @@ x = 5 + true;
 x = 5 + false;
 
 // Undefined is coerced to 0 (falsy)
-x = 5 + undefined;
+x = 5 + undefined; // NaN 'number'
 
 console.log(x, typeof x);
