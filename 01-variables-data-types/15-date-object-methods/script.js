@@ -4,6 +4,7 @@ let d = new Date();
 // Date methods
 
 x = d.toString();
+console.log(x);
 
 x = d.getTime();
 x = d.valueOf();

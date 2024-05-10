@@ -40,6 +40,7 @@ x = s.substring(7);
 
 // slice() - extracts a part of a string and returns a new string
 x = s.slice(-11, -6);
+console.log(x);
 
 // trim() - remove whitespace from beginning and end of string
 x = '         Hello World';

@@ -24,10 +24,14 @@ x = Math.min(4, 5, 3);
 // Maximum number
 x = Math.max(4, 5, 3);
 
-// Get a random number/decimal between 0 and 1
+// Get a random number/decimal between 0 to less than 1
 x = Math.random();
 
-// Get a random number between 1 and 100
-x = Math.floor(Math.random() * 100 + 1);
+// Get a random number between 1 and 10
+// + 1 to remove 0
+x = Math.floor(Math.random() * 10 + 1);
+
+// Get a random number between 0 and 10
+// x = Math.floor(Math.random() * 11);
 
 console.log(x);
