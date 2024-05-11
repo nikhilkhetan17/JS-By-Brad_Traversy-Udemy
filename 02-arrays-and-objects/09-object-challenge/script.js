@@ -35,7 +35,7 @@ library[1].status.read = true;
 library[2].status.read = true;
 
 // Step 3
-const { title: firstBook } = library[0];
+const { title: firstBook } = library[0]; // Nice way
 
 console.log(firstBook);
 
