@@ -32,7 +32,7 @@ const obj2 = { c: 3, d: 4 };
 // console.log(objTest);
 
 // Spread operator
-const obj3 = { ...obj1, obj2 };
+const obj3 = { ...obj1, ...obj2 };
 // Same as using ...
 const obj4 = Object.assign({}, obj1, obj2);
 
