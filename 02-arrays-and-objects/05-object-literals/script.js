@@ -22,6 +22,7 @@ x = person.hobbies[0];
 // Updating properties
 person.name = 'Jane Doe';
 person['isAdmin'] = false;
+// x = person
 
 // Deleting properties
 delete person.age;
@@ -35,6 +36,7 @@ person.greet = function () {
 };
 
 person.greet();
+console.log(person);
 
 // Keys with multiple words
 const person2 = {
