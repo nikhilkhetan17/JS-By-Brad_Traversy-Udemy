@@ -19,7 +19,10 @@ x = num.toExponential(2);
 // toLocaleString() - returns a string representation of the number, using the current locale
 x = num.toLocaleString('en-US');
 
-// valueOf - Get value
+const num1 = new Number(500000);
+console.log(num1.toLocaleString('en-IN'));
+
+// valueOf - Get value -> Returns the primitive value of the specified object.
 x = num.valueOf();
 
 // The Number object itself has some properties and methods

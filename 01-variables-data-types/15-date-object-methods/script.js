@@ -4,7 +4,6 @@ let d = new Date();
 // Date methods
 
 x = d.toString();
-console.log(x);
 
 x = d.getTime();
 x = d.valueOf();
@@ -27,11 +26,12 @@ x = d.getSeconds();
 x = d.getMilliseconds();
 
 x = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+console.log(x);
 
 // Intl.DateTimeFormat API (locale specific)
 x = Intl.DateTimeFormat('en-US').format(d);
 x = Intl.DateTimeFormat('en-GB').format(d);
-x = Intl.DateTimeFormat('default').format(d);
+x = Intl.DateTimeFormat('default').format(d); //US format
 
 x = Intl.DateTimeFormat('default', { month: 'long' }).format(d);
 
@@ -45,7 +45,8 @@ x = d.toLocaleString('default', {
   hour: 'numeric',
   minute: 'numeric',
   second: 'numeric',
-  timeZone: 'America/New_York',
+  timeZone: 'Asia/Kolkata',
+  hour12: true,
 });
 
 console.log(x);
