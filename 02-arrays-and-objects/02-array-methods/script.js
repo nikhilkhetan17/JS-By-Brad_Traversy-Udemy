@@ -16,6 +16,7 @@ arr.shift();
 
 // reverse() - Reverse an array
 arr.reverse();
+console.log(arr);
 
 // includes() - Check to see if something is in the array
 x = arr.includes(445);
@@ -31,12 +32,14 @@ x = arr.join();
 x = arr.slice(1, 4);
 
 // splice() works like slice() except it takes the index of the first element and the number of elements after that as a second argument. it also mutates the original array where slice() does not
-x = arr.splice(1, 4);
 
-// Remove a single element/value - The following will mutate the original array by taking out the element with the index of 4. x will be equal to a new array with that plucked out value.
-x = arr.splice(4, 1);
+// x = arr.splice(1, 4);
+
+// Remove a single element/value - The following will mutate the original array by taking out the element with the index of 3. x will be equal to a new array with that plucked out value.
+
+// x = arr.splice(3, 1);
 
 // Chaining methods - Some methods can be chained depending on the return value.
-x = arr.slice(1, 4).reverse().toString().charAt(0);
+x = arr.splice(1, 4).reverse().toString().charAt(0);
 
 console.log(x);
