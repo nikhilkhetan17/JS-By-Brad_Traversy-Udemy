@@ -1,6 +1,6 @@
 // 'window' is globally scoped
 // alert('Hello');
-// console.log(innerWidth);
+// console.log(window.innerWidth);
 
 // Global scope variable
 const x = 100;
@@ -15,7 +15,7 @@ function run() {
 
 run();
 
-// Access global vars in blocks
+// Access global vars in block
 if (true) {
   console.log(x, 'in block');
 }
@@ -26,8 +26,7 @@ function add() {
   const y = 50;
   console.log(x + y);
 }
+add();
 
 // Can not access a function scoped variable in global scope
 console.log(y);
-
-add();
