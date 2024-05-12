@@ -1,4 +1,7 @@
-// IFFE Syntax (Has it's own scope and runs right away)
+// IIFE Syntax (Has it's own scope and runs right away)
+// Declare and invoke the function at the same time
+// One the main reason to use IIFE is to avoid global scope pollution
+// const user = 'John'; // Identifier 'user' has already been declared
 (function () {
   const user = 'John';
   console.log(user);
@@ -14,4 +17,5 @@
 // Named IIFE (Can only be called recursively)
 (function hello() {
   console.log('Hello');
+  // hello(); // recursion
 })();
