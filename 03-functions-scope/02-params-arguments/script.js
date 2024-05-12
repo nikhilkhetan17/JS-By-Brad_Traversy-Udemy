@@ -1,6 +1,6 @@
 // Default Params
 function registerUser(user = 'Bot') {
-  // Old way - before using `=`
+  // Old way - before(ES6) using `=`
   // if (!user) {
   //   user = 'Bot';
   // }
@@ -12,6 +12,7 @@ console.log(registerUser());
 
 // Rest Params
 function sum(...numbers) {
+  // console.log(numbers); //it will give us an array with all the arguments passed in.
   let total = 0;
 
   for (const num of numbers) {
@@ -32,8 +33,8 @@ const user = {
   id: 1,
   name: 'John',
 };
-
 console.log(loginUser(user));
+
 console.log(
   loginUser({
     id: 2,
@@ -42,12 +43,14 @@ console.log(
 );
 
 // Arrays as params
+// function getRandom(...arr) {
 function getRandom(arr) {
   const randomIndex = Math.floor(Math.random() * arr.length);
-
+  // console.log(randomIndex);
   const item = arr[randomIndex];
 
   console.log(item);
 }
 
-getRandom([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+getRandom([10, 20, 30, 40, 50, 60, 70, 80, 90, 100]);
+// getRandom(10, 20, 30, 40, 50, 60, 70, 80, 90, 100);

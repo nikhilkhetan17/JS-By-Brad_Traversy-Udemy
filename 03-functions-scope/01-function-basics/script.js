@@ -16,7 +16,7 @@ add(5, 10);
 
 // Parameters vs. Arguments
 // Parameters are the names of the variables that are used to pass data into a function.
-// Arguments are the values that are passed into the function
+// Arguments are the values that are passed into the function call.
 
 // Returning a value
 function subtract(num1, num2) {
