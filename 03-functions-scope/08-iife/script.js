@@ -19,3 +19,12 @@
   console.log('Hello');
   // hello(); // recursion
 })();
+
+// Q. can IIFE return something in javascript?
+// Ans. Yes, an Immediately Invoked Function Expression (IIFE) in JavaScript can return a value, just like a regular function.
+
+const result = (function () {
+  // Function body
+  return 'Hello, World!'; // Return something
+})();
+console.log(result); // Output: Hello, World!
