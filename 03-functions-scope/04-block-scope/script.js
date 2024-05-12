@@ -16,7 +16,7 @@ for (let i = 0; i <= 10; i++) {
 
 // console.log(i); // ReferenceError: i is not defined
 
-// Using var
+// Using var (var is not block scoped)
 if (true) {
   const a = 500;
   let b = 600;
@@ -33,8 +33,8 @@ function run() {
 
 run();
 
-// console.log(d);
-
+// console.log(d);  // ReferenceError: d is not defined
 
 const foo = 1;
 var bar = 2; // Put on the window object
+console.log(window);
