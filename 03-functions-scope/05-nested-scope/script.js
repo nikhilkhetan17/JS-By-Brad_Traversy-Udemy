@@ -3,10 +3,10 @@ function first() {
 
   function second() {
     const y = 200;
-    console.log(x + y);
+    console.log(x + y); // child can access parent variable
   }
 
-  // console.log(y);
+  // console.log(y); // parent can't access child variable
 
   second();
 }
@@ -21,5 +21,5 @@ if (true) {
     console.log(x + y);
   }
 
-  console.log(y);
+  console.log(y); // parent can't access child variable
 }
