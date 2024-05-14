@@ -1,5 +1,6 @@
-const d = new Date(2022, 1, 10, 19, 0, 0);
+const d = new Date(2022, 1, 10, 15, 0, 0);
 const month = d.getMonth();
+// console.log(d);
 const hour = d.getHours();
 
 // Immediate value evaluation
