@@ -6,7 +6,7 @@ let a = null;
 //   a = 10;
 // }
 
-// a = a || 10;
+// a = a || 10; //if `a` is falsy then set the right side operand
 
 a ||= 10;
 

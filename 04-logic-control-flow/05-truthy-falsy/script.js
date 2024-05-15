@@ -1,3 +1,5 @@
+// When you pass something to an if statement it's always going to be coerced into a boolean.
+
 // Falsy Values:
 // - false
 // - 0
@@ -27,7 +29,7 @@ if (x) {
 console.log(Boolean(x));
 
 // Truthy and falsy caveats
-const children = 3;
+const children = 0;
 
 // Checking for literal 0
 if (children) {
