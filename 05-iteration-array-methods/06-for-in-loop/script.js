@@ -14,5 +14,5 @@ for (const key in colorObj) {
 const colorArr = ['red', 'green', 'blue', 'yellow'];
 
 for (const key in colorArr) {
-  console.log(colorArr[key]);
+  console.log(key, colorArr[key]);
 }
