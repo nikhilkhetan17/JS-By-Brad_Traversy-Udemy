@@ -1,17 +1,17 @@
-let i = 0;
+let i = 1;
 
-while (i <= 20) {
-  console.log('Number ' + i);
-  i++;
-}
+// while (i <= 20) {
+//   console.log('Number ' + i);
+//   i++;
+// }
 
 // Loop over arrays
-const arr = [10, 20, 30, 40, 50];
+// const arr = [10, 20, 30, 40, 50];
 
-while (i < arr.length) {
-  console.log(arr[i]);
-  i++;
-}
+// while (i < arr.length) {
+//   console.log(arr[i]);
+//   i++;
+// }
 
 // Nesting while loops
 while (i <= 5) {
@@ -30,4 +30,4 @@ while (i <= 5) {
 do {
   console.log('Number ' + i);
   i++;
-} while (i <= 20);
+} while (i <= 10);
