@@ -23,7 +23,7 @@ const companies = [
 
 // Create an array of company names
 const companyNames = companies.map((company) => company.name);
-// console.log(companyNames);
+console.log(companyNames);
 
 // Create an array with just company and category
 const companyInfo = companies.map((company) => {
@@ -32,6 +32,7 @@ const companyInfo = companies.map((company) => {
     category: company.category,
   };
 });
+console.log(companyInfo);
 
 // Create an array of objects with the name and the length of each company in years
 const companyYears = companies.map((company) => {
@@ -47,6 +48,7 @@ console.log(companyYears);
 const squareAndDouble = numbers
   .map((number) => Math.sqrt(number))
   .map((sqrt) => sqrt * 2);
+console.log(squareAndDouble);
 
 const squareAndDouble2 = numbers
   .map(function (number) {
@@ -60,8 +62,8 @@ const squareAndDouble2 = numbers
   });
 
 // Chaining different methods
-const evenDouble = numbers
+const evenPower = numbers
   .filter((number) => number % 2 === 0)
-  .map((number) => number * 2);
+  .map((number) => number ** 2);
 
-console.log(evenDouble);
+console.log(evenPower);
