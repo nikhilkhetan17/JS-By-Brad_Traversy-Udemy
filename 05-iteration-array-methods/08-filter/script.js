@@ -6,14 +6,16 @@ const evenNumbers = numbers.filter(function (number) {
 
 // Short version
 const evenNumbers2 = numbers.filter((number) => number % 2 === 0);
+console.log(evenNumbers2);
 
 // Same with forEach
 const evenNumbers3 = [];
 numbers.forEach((number) => {
   if (number % 2 === 0) {
-    evenNumbers.push(number);
+    evenNumbers3.push(number);
   }
 });
+console.log(evenNumbers3);
 
 const companies = [
   { name: 'Company One', category: 'Finance', start: 1981, end: 2004 },
