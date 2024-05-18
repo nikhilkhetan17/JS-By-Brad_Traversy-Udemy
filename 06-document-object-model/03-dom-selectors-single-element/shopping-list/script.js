@@ -17,7 +17,7 @@ const title = document.getElementById('app-title');
 console.log(title.textContent);
 title.textContent = 'Hello World';
 title.innerText = 'Hello Again';
-title.innerHTML = '<strong>Shopping List</strong>';
+title.innerHTML = '<strong>Shopping Nikhil</strong>';
 
 // Change styles
 title.style.color = 'red';
