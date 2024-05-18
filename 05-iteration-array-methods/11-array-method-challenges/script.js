@@ -37,12 +37,21 @@ const people = [
   },
 ];
 
+// const youngPeople = people
+//   .filter((person) => person.age <= 25)
+//   .map((person) => ({
+//     name: person.firstName + ' ' + person.lastName,
+//     email: person.email,
+//   }));
+
 const youngPeople = people
-  .filter((person) => person.age <= 25)
-  .map((person) => ({
-    name: person.firstName + ' ' + person.lastName,
-    email: person.email,
-  }));
+  .filter((ele) => ele.age <= 25)
+  .map((ele) => {
+    return {
+      name: `${ele.firstName} ${ele.lastName}`,
+      email: ele.email,
+    };
+  });
 
 console.log(youngPeople);
 
@@ -50,7 +59,7 @@ console.log(youngPeople);
 const numbers = [2, -30, 50, 20, -12, -9, 7];
 
 const positiveSum = numbers
-  .filter((number) => number > 0)
+  .filter((ele) => ele > 0)
   .reduce((acc, cur) => acc + cur, 0);
 
 console.log(positiveSum);
@@ -58,8 +67,12 @@ console.log(positiveSum);
 // Challenge 3
 const words = ['coder', 'programmer', 'developer'];
 
-const cWords = words.map((word) => {
-  return word[0].toUpperCase() + word.slice(1, word.length);
-});
+// const capitalize = words.map((word) => {
+//   return word[0].toUpperCase() + word.slice(1, word.length);
+// });
 
-console.log(cWords);
+const capitalize = words.map(
+  (ele) => ele.charAt(0).toUpperCase() + ele.slice(1)
+);
+
+console.log(capitalize);
