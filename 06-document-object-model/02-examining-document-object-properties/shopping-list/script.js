@@ -34,18 +34,19 @@ output = document.forms[0].action;
 document.forms[0].id = 'new-id';
 
 // Get all links
-// output = document.links;
-// output = document.links[0];
-// output = document.links[0].href;
-// output = document.links[0].href = 'https://facebook.com';
-// output = document.links[0].id = 'google-link';
-// output = document.links[0].className = 'google-class';
-// output = document.links[0].classList;
+output = document.links;
+output = document.links[0];
+output = document.links[0].href;
+output = document.links[0].href = 'https://facebook.com';
+output = document.links[0].id = 'google-link';
+output = document.links[0].className = 'google-class';
+output = document.links[0].classList;
 
 // Get all images
 output = document.images;
 output = document.images[0];
 output = document.images[0].src;
+console.log(output);
 
 // Turn an HTMLCollection into an array
 const forms = Array.from(document.forms);
