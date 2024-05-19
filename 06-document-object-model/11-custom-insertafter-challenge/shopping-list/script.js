@@ -1,5 +1,7 @@
 function insertAfter(newEl, existingEl) {
-  existingEl.parentElement.insertBefore(newEl, existingEl.nextSibling);
+  const parent = existingEl.parentElement;
+  console.log(parent);
+  parent.insertBefore(newEl, existingEl.nextSibling);
 }
 
 // New element to insert
