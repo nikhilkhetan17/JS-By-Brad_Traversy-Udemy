@@ -2,6 +2,7 @@
 // Returns a NodeList
 
 const listItems = document.querySelectorAll('.item');
+console.log(listItems);
 
 // Access elements by index
 console.log(listItems[1].innerText);
@@ -29,6 +30,7 @@ listItems.forEach((item, index) => {
 // Returns an HTMLCollection
 
 const listItems2 = document.getElementsByClassName('item');
+console.log(listItems2);
 
 console.log(listItems2[2].innerText);
 
@@ -42,3 +44,5 @@ listItemsArray.forEach((item) => {
 
 const listItems3 = document.getElementsByTagName('li');
 console.log(listItems3[0].innerText);
+
+// we can use higher order array methods on NodeList but cannot on HTML collection.
