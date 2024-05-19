@@ -2,6 +2,7 @@ const div = document.createElement('div');
 div.className = 'my-element';
 div.id = 'my-element';
 div.setAttribute('title', 'My Element');
+console.log(div);
 
 // div.innerText = 'Hello World';
 
