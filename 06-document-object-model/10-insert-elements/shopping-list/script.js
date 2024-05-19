@@ -7,6 +7,7 @@ function insertElement() {
 
   filter.insertAdjacentElement('beforebegin', h1);
 }
+insertElement();
 
 // insertAdjacentText Example
 function insertText() {
@@ -14,6 +15,7 @@ function insertText() {
 
   item.insertAdjacentText('beforebegin', 'insertAdjacentText');
 }
+insertText();
 
 // insertAdjacentHTML example
 function insertHTML() {
@@ -21,6 +23,7 @@ function insertHTML() {
 
   clearBtn.insertAdjacentHTML('afterend', '<h2>insertAdjacentHTML</h2>');
 }
+insertHTML();
 
 // insertBefore Example
 function insertBeforeItem() {
@@ -33,8 +36,7 @@ function insertBeforeItem() {
 
   ul.insertBefore(li, thirdItem);
 }
-
-insertElement();
+insertBeforeItem();
 
 /*
 <!-- beforebegin -->

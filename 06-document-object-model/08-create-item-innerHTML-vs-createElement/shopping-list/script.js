@@ -15,8 +15,8 @@ createListItem('Eggs');
 function createNewItem(item) {
   const li = document.createElement('li');
   const text = document.createTextNode(item);
-  li.appendChild(text);
   // li.innerText = 'Cheese';
+  li.appendChild(text);
   // li.appendChild(document.createTextNode(item));
 
   const button = document.createElement('button');
