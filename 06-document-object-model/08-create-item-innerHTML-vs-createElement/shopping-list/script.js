@@ -9,11 +9,15 @@ function createListItem(item) {
 
   document.querySelector('.items').appendChild(li);
 }
+createListItem('Eggs');
 
 // Clean & Performant
 function createNewItem(item) {
   const li = document.createElement('li');
-  li.appendChild(document.createTextNode(item));
+  const text = document.createTextNode(item);
+  li.appendChild(text);
+  // li.innerText = 'Cheese';
+  // li.appendChild(document.createTextNode(item));
 
   const button = document.createElement('button');
   button.className = 'remove-item btn-link text-red';
@@ -23,9 +27,8 @@ function createNewItem(item) {
 
   button.appendChild(icon);
   li.appendChild(button);
+  console.log(li);
 
   document.querySelector('.items').appendChild(li);
 }
-
-createListItem('Eggs');
 createNewItem('Cheese');
