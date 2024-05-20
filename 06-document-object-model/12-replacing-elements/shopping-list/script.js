@@ -40,8 +40,8 @@ function replaceChildHeading() {
   const h1 = document.querySelector('header h1');
 
   const h2 = document.createElement('h2');
-  h2.id = 'app-title';
-  h2.textContent = 'Shopping List';
+  // h2.id = 'app-title';
+  h2.textContent = 'Nikhil List';
   header.replaceChild(h2, h1);
 }
 
