@@ -3,6 +3,7 @@ function removeClearButton() {
   const clearBtn = document.querySelector('#clear');
   clearBtn.remove();
 }
+removeClearButton();
 
 // removeChild() Method
 function removeFirstItem() {
@@ -11,6 +12,7 @@ function removeFirstItem() {
 
   ul.removeChild(li);
 }
+// removeFirstItem();
 
 // Other examples
 
@@ -20,6 +22,7 @@ function removeItem(itemNumber) {
 
   ul.removeChild(li);
 }
+// removeItem(3);
 
 function removeItem2(itemNumber) {
   const ul = document.querySelector('ul');
@@ -27,16 +30,22 @@ function removeItem2(itemNumber) {
 
   ul.removeChild(li);
 }
+// removeItem2(4);
 
 function removeItem3(itemNumber) {
   const li = document.querySelectorAll('li');
+  // console.log(li); // nodeList
   li[itemNumber - 1].remove();
 }
+// removeItem3(2);
 
 const removeItem4 = (itemNumber) =>
   document.querySelectorAll('li')[itemNumber - 1].remove();
 
-removeClearButton();
-// removeFirstItem();
-// removeItem(2);
-removeItem4(2);
+removeItem4(1);
+
+// function removeAll() {
+//   const li = document.querySelectorAll('li');
+//   li.forEach((item) => item.remove());
+// }
+// removeAll();
