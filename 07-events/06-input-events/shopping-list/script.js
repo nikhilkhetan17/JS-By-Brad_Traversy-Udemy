@@ -4,10 +4,12 @@ const checkbox = document.getElementById('checkbox');
 const heading = document.querySelector('h1');
 
 function onInput(e) {
+  // console.log(e.target.value);
   heading.textContent = e.target.value;
 }
 
 function onChecked(e) {
+  // console.log(e.target.checked);
   const isChecked = e.target.checked;
   heading.textContent = isChecked ? 'Checked' : 'Not Checked';
 }
@@ -26,7 +28,7 @@ function onBlur() {
 
 // input, change, focus and blur events
 itemInput.addEventListener('input', onInput);
-priorityInput.addEventListener('change', onInput);
+priorityInput.addEventListener('change', onInput); //'input' also work
 checkbox.addEventListener('input', onChecked);
 itemInput.addEventListener('focus', onFocus);
 itemInput.addEventListener('blur', onBlur);
