@@ -1,7 +1,9 @@
-// On Page Load
+// On Page Load  // without using deffer in script tag
 // window.onload = function () {
 //   document.querySelector('h1').textContent = 'Hello World';
 // };
+
+// document.querySelector('h1').textContent = 'Hello World'; // using deffer in script tag
 
 window.addEventListener('load', () => console.log('Page Loaded'));
 
@@ -9,6 +11,7 @@ window.addEventListener('load', () => console.log('Page Loaded'));
 window.addEventListener('DOMContentLoaded', () => console.log('DOM Loaded'));
 
 console.log('Run me');
+// -------------------------------------------------------------------
 
 // Resize Event
 window.addEventListener('resize', () => {
@@ -39,6 +42,6 @@ window.addEventListener('focus', () => {
 
 window.addEventListener('blur', () => {
   document.querySelectorAll('p').forEach((p) => {
-    p.style.color = 'black';
+    p.style.color = 'red';
   });
 });
