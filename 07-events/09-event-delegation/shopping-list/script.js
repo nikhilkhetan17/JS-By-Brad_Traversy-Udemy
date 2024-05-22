@@ -11,7 +11,7 @@ const list = document.querySelector('ul');
 
 // Add a single event listener on the parent (Event Delegation)
 list.addEventListener('click', (e) => {
-  // console.log(e.target);
+  // console.log(e.target.tagName);
   if (e.target.tagName === 'LI') {
     e.target.remove();
   }
