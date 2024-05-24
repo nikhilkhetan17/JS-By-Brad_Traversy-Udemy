@@ -6,6 +6,7 @@ const promise = new Promise((resolve, reject) => {
     resolve();
   }, 1000);
 });
+console.log(promise);
 
 // promise.then(() => {
 //   console.log('Promise consumed..');
@@ -13,16 +14,17 @@ const promise = new Promise((resolve, reject) => {
 
 const getUser = new Promise((resolve, reject) => {
   setTimeout(() => {
-    let error = true;
+    let error = false;
 
     if (!error) {
       resolve({ name: 'John', age: 30 });
     } else {
       reject('Error: Something went wrong');
     }
-  }, 1000);
+  }, 2000);
 });
 
+// console.log(getUser);
 getUser
   .then((user) => console.log(user))
   .catch((error) => console.log(error))
