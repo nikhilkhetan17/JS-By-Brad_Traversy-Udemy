@@ -8,6 +8,7 @@ function getData(endpoint) {
       if (this.readyState === 4) {
         if (this.status === 200) {
           resolve(JSON.parse(this.responseText));
+          // console.log(this.responseText);
         } else {
           reject('Something went wrong');
         }
@@ -19,6 +20,19 @@ function getData(endpoint) {
     }, Math.floor(Math.random() * 3000) + 1000);
   });
 }
+
+// callback hell
+/* 
+  getData('./movies.json', (data) => {
+    console.log(data);
+    getData('./actors.json', (data) => {
+      console.log(data);
+      getData('./directors.json', (data) => {
+        console.log(data);
+      });
+    });
+  });
+*/
 
 // Whatever we return from a .then() is passed into the next .then() callback function args
 getData('./movies.json')
