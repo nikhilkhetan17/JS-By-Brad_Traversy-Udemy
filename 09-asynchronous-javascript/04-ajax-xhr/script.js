@@ -11,8 +11,9 @@ xhr.open('GET', 'https://api.github.com/users/bradtraversy/repos');
 // - 3: processing request
 // - 4: request finished and response is ready
 xhr.onreadystatechange = function () {
+  // console.log(this.readyState);
   if (this.readyState === 4 && this.status === 200) {
-    // console.log(JSON.parse(this.responseText));
+    console.log(JSON.parse(this.responseText));
     const data = JSON.parse(this.responseText);
 
     data.forEach((repo) => {
