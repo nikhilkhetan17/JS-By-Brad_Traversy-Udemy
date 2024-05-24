@@ -1,8 +1,10 @@
-// function toggle(e) {
-//   e.target.classList.toggle('danger');
-// }
+// Function that get passed into another function is callback function
 
-// document.querySelector('button').addEventListener('click', toggle);
+function toggle(e) {
+  e.target.classList.toggle('danger');
+}
+
+document.querySelector('button').addEventListener('click', toggle);
 
 const posts = [
   { title: 'Post One', body: 'This is post one' },
@@ -13,7 +15,7 @@ function createPost(post, cb) {
   setTimeout(() => {
     posts.push(post);
     cb();
-  }, 2000);
+  }, 2000); // it waits total 3 sec
 }
 
 function getPosts() {
@@ -25,5 +27,7 @@ function getPosts() {
     });
   }, 1000);
 }
+
+// getPosts();
 
 createPost({ title: 'Post Three', body: 'This is post' }, getPosts);
