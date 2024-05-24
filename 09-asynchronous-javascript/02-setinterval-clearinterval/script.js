@@ -4,10 +4,18 @@
 //   console.log(a, Date.now());
 // }
 
-let intervalID;
+// function stopChange() {
+//   clearInterval(intervalID);
+// }
+
+// document.getElementById('stop').addEventListener('click', stopChange);
+// ----------------------------------------------------------
+
+let intervalID; // undefined
 
 function startChange() {
   if (!intervalID) {
+    // !undefined is true
     intervalID = setInterval(changeRandomColor, 1000);
   }
 }

@@ -4,15 +4,17 @@ setTimeout(function () {
   console.log('Hello from callback');
 }, 2000);
 
+console.log('Hello from global');
+
 // Named function
-setTimeout(changeText, 3000);
+// setTimeout(changeText, 3000);
 
 function changeText() {
-  document.querySelector('h1').textContent = 'Hello from callback';
+  document.querySelector('h1').textContent = 'Hello from h1 callback';
 }
 
 // clearTimeout() will clear a timer
-const timerId = setTimeout(changeText, 3000);
+const timerId = setTimeout(changeText, 4000);
 
 document.querySelector('#cancel').addEventListener('click', () => {
   console.log(timerId);
