@@ -3,14 +3,34 @@ const posts = [
   { title: 'Post Two', body: 'This is post two' },
 ];
 
+// function createPost(post, cb) {
+//   setTimeout(() => {
+//     posts.push(post);
+//     cb();
+//   }, 2000); // it waits total 3 sec
+// }
+
+// function getPosts() {
+//   setTimeout(() => {
+//     posts.forEach(function (post) {
+//       const div = document.createElement('div');
+//       div.innerHTML = `<strong>${post.title}</strong> - ${post.body}`;
+//       document.querySelector('#posts').appendChild(div);
+//     });
+//   }, 1000);
+// }
+
+// createPost({ title: 'Post Three ', body: 'This is post' }, getPosts);
+
+// Callback to promise
 function createPost(post) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       let error = false;
 
       if (!error) {
-        posts.push(post);
-        resolve();
+        // posts.push(post);
+        resolve(posts.push(post));
       } else {
         reject('Something went wrong');
       }
@@ -34,6 +54,6 @@ function showError(error) {
   document.getElementById('posts').appendChild(h3);
 }
 
-createPost({ title: 'Post Three', body: 'This is post' })
+createPost({ title: 'Post Three', body: 'This is post three' })
   .then(getPosts)
   .catch(showError);
