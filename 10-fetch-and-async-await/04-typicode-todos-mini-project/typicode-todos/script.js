@@ -1,9 +1,10 @@
 const apiUrl = 'https://jsonplaceholder.typicode.com/todos';
 
 const getTodos = () => {
-  fetch(apiUrl + '?_limit=10')
+  fetch(apiUrl + '?_limit=5')
     .then((res) => res.json())
     .then((data) => {
+      console.log(data);
       data.forEach((todo) => addTodoToDOM(todo));
     });
 };
@@ -11,7 +12,8 @@ const getTodos = () => {
 const addTodoToDOM = (todo) => {
   const div = document.createElement('div');
   div.classList.add('todo');
-  div.appendChild(document.createTextNode(todo.title));
+  // div.appendChild(document.createTextNode(todo.title));
+  div.innerText = `${todo.title}`;
   div.setAttribute('data-id', todo.id);
 
   if (todo.completed) {
@@ -27,6 +29,7 @@ const createTodo = (e) => {
   const newTodo = {
     title: e.target.firstElementChild.value,
     completed: false,
+    // userId: 5,
   };
 
   fetch(apiUrl, {
@@ -37,25 +40,32 @@ const createTodo = (e) => {
     },
   })
     .then((res) => res.json())
-    .then((data) => addTodoToDOM(data));
+    .then((data) => {
+      console.log(data);
+      return addTodoToDOM(data);
+    });
 };
 
 const toggleCompleted = (e) => {
   if (e.target.classList.contains('todo')) {
     e.target.classList.toggle('done');
 
+    // console.log(e.target.dataset.id);
     updateTodo(e.target.dataset.id, e.target.classList.contains('done'));
   }
 };
 
 const updateTodo = (id, completed) => {
+  // console.log(id, completed);
   fetch(`${apiUrl}/${id}`, {
     method: 'PUT',
     body: JSON.stringify({ completed }),
     headers: {
       'Content-Type': 'application/json',
     },
-  });
+  })
+    .then((res) => res.json())
+    .then((data) => console.log(data));
 };
 
 const deleteTodo = (e) => {
