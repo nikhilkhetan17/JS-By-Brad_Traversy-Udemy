@@ -9,6 +9,7 @@ function fetchUser() {
 }
 
 function displayUser(user) {
+  console.log(user);
   const userDisplay = document.querySelector('#user');
 
   if (user.gender === 'female') {
@@ -18,15 +19,15 @@ function displayUser(user) {
   }
 
   userDisplay.innerHTML = `
-  <div class="flex justify-between">
+  <div class="flex justify-betwee n">
   <div class="flex">
     <img
       class="w-48 h-48 rounded-full mr-8"
       src="${user.picture.large}"
     />
-    <div class="space-y-3">
+    <div class="space-y-3"> 
       <p class="text-xl">
-        <span class="font-bold">Name: </span>${user.name.first} ${user.name.last}
+        <span class="font-bold">Name: </span>${user.name.title} ${user.name.first} ${user.name.last}
       </p>
       <p class="text-xl">
         <span class="font-bold">Email: </span> ${user.email}
@@ -55,3 +56,4 @@ function hideSpinner() {
 document.querySelector('#generate').addEventListener('click', fetchUser);
 
 fetchUser();
+// document.addEventListener('DOMContentLoaded', fetchUser);
