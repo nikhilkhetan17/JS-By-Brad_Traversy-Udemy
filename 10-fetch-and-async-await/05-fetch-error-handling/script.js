@@ -47,7 +47,7 @@ fetch('http://httpstat.us/404')
   });
 
 // Check for specific code
-fetch('http://httpstat.us/200')
+fetch('http://httpstat.us/500  ')
   .then((response) => {
     if (response.status === 404) {
       throw new Error('Not Found');
