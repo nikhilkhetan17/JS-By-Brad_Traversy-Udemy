@@ -14,6 +14,7 @@ const getUsers = async () => {
     console.log(error);
   }
 };
+getUsers();
 
 const getPosts = async () => {
   // const response = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -28,5 +29,4 @@ const getPosts = async () => {
   console.log(data);
 };
 
-// getUsers();
-getPosts().catch((error) => console.log(error));
+// getPosts().catch((error) => console.log(error));
