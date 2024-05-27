@@ -1,3 +1,4 @@
+// 1st Option (Recommended)
 const getUsers = async () => {
   try {
     // const response = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -16,6 +17,7 @@ const getUsers = async () => {
 };
 getUsers();
 
+// 2nd Option
 const getPosts = async () => {
   // const response = await fetch('https://jsonplaceholder.typicode.com/posts');
   const response = await fetch('http://httpstat.us/500');

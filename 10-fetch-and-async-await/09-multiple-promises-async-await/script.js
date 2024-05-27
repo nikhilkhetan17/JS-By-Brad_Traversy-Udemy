@@ -13,9 +13,9 @@ function getData(endpoint) {
       }
     };
 
-    setTimeout(() => {
-      xhr.send();
-    }, Math.floor(Math.random() * 3000) + 1000);
+    // setTimeout(() => {
+    xhr.send();
+    // }, Math.floor(Math.random() * 3000) + 1000);
   });
 }
 
@@ -39,7 +39,9 @@ async function getAllData() {
   const directors = await getData('./directors.json');
   console.log(movies, actors, directors);
 }
+// getAllData();
 
+// ------------------------------------------------------------------------
 async function getAllDataWithFetch() {
   const moviesRes = await fetch('./movies.json');
   const movies = await moviesRes.json();
@@ -52,20 +54,41 @@ async function getAllDataWithFetch() {
 
   console.log(movies, actors, directors);
 }
+getAllDataWithFetch();
 
+// array destructuring
 async function getAllDataPromiseAll() {
   const [moviesRes, actorsRes, directorsRes] = await Promise.all([
     fetch('./movies.json'),
     fetch('./actors.json'),
     fetch('./directors.json'),
   ]);
-
+  // console.log(moviesRes.url);
   const movies = await moviesRes.json();
   const actors = await actorsRes.json();
   const directors = await directorsRes.json();
 
   console.log(movies, actors, directors);
 }
+
+// without array destructuring
+/*
+  async function getAllDataPromiseAll() {
+    const responses = await Promise.all([
+      fetch('./movies.json'),
+      fetch('./actors.json'),
+      fetch('./directors.json'),
+    ]);
+    // console.log(responses);
+    // console.log(moviesRes.url);
+    const movies = await responses[0].json();
+    const actors = await responses[1].json();
+    const directors = await responses[2].json();
+ 
+    console.log(movies, actors, directors);
+  } 
+*/
+// getAllDataPromiseAll();
 
 async function getAllDataPromiseAll2() {
   const [movies, actors, directors] = await Promise.all([
@@ -76,8 +99,41 @@ async function getAllDataPromiseAll2() {
 
   console.log(movies, actors, directors);
 }
+// getAllDataPromiseAll2();
 
-// getAllData();
-// getAllDataWithFetch();
-// getAllDataPromiseAll();
-getAllDataPromiseAll2();
+// ---------------------------------By me Self note----------------------------
+
+// Option 1
+// async function fetchData(url) {
+//   try {
+//     const response = await fetch(url);
+//     return await response.json();
+//   } catch (error) {
+//     console.log(`ErrorNk fetching ${url}:`, error);
+//     throw error; // Re-throw the error to propagate it further
+//   }
+// }
+
+// Option 2
+function fetchData(url) {
+  return fetch(url)
+    .then((response) => response.json())
+    .catch((error) => {
+      console.log(`ErrorNk fetching ${url}:`, error);
+      throw error; // Re-throw the error to propagate it further
+    });
+}
+
+// fetchData('./movies.json')
+//   .then((movies) => {
+//     console.log(movies);
+//     return fetchData('./actors.json');
+//   })
+//   .then((actors) => {
+//     console.log(actors);
+//     return fetchData('./directors.json');
+//   })
+//   .then((directors) => {
+//     console.log(directors);
+//   })
+//   .catch((err) => console.log(err));

@@ -26,7 +26,7 @@ const getPosts = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
   const data = await res.json();
 
-  throw new Error('Hello');
+  // throw new Error('Hello');
 
   console.log(data);
 };
