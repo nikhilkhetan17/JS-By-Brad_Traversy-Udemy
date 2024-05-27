@@ -1,11 +1,11 @@
-// try {
-//   console.log(x);
-// } catch (error) {
-//   console.log('Error: ' + error);
-// }
+try {
+  console.log(x);
+} catch (error) {
+  console.log('Error: ' + error);
+}
 
 function double(number) {
-  if (isNaN(number)) {
+  if (typeof number !== 'number' || isNaN(number)) {
     throw new Error(number + ' is not a number');
   }
 

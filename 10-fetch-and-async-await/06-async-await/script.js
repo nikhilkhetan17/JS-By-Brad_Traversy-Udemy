@@ -11,7 +11,7 @@ async function getPromise() {
   console.log(response);
 }
 
-// getPromise();
+getPromise();
 
 async function getUsers() {
   const res = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -20,7 +20,7 @@ async function getUsers() {
   console.log(data);
 }
 
-// getUsers();
+getUsers();
 
 const getPosts = async () => {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
