@@ -10,6 +10,7 @@ function Rectangle(name, width, height) {
 
 // We can create as many instances of our Rectangle objects as we want using the `new` keyword
 const rect1 = new Rectangle('Rectangle 1', 10, 10);
+console.log(rect1);
 console.log(rect1.name);
 console.log(rect1.area());
 
