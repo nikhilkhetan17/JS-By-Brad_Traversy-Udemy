@@ -4,12 +4,12 @@ const strObj = new String('Hello');
 console.log(strLit, typeof strLit);
 console.log(strObj, typeof strObj);
 
-// Boxing
+// Boxing - is when js adds wrapper object onto a literal
 console.log(strLit.toUpperCase());
 // Even though the strLit variable is a string literal for a primitive type, it can still use the toUpperCase() method because the string literal is converted to a String object behind the scenes. This is called boxing.
 console.log(strLit[0]);
 
-// Unboxing
+// Unboxing - is when an object is turned back into a literal
 console.log(strObj.valueOf(), typeof strObj.valueOf());
 
 console.log(strLit.constructor);
