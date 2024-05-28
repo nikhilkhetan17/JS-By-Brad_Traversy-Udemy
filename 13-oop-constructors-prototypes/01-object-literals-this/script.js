@@ -8,7 +8,7 @@ const rectangle = {
   },
 };
 
-// Object literals are great for creating objects that only need one instance. If we needed two Rectangles, we would have to create two objects
+// Object literals are great for creating objects that only need one instance. If we needed two Rectangles, we would have to create two objects. Instead we can go for classes or function constructor.
 
 const rectangle2 = {
   name: 'Rectangle 2',
