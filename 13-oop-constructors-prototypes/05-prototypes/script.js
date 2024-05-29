@@ -1,4 +1,4 @@
-// A prototype is a special object where additional methods and properties can be attached and shared across all instances of its constructor function.
+// A prototype is a special object where additional methods and properties can be attached and shared across all instances of its constructor function or class.
 
 function Rectangle(name, width, height) {
   this.name = name;
