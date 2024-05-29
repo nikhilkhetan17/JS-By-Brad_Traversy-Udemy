@@ -1,3 +1,5 @@
+// leave it for now (tricky)
+
 const rectanglePrototypes = {
   area: function () {
     return this.width * this.height;

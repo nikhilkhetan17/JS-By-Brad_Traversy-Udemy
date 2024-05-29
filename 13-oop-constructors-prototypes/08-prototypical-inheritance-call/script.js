@@ -1,3 +1,5 @@
+// leave it for now (tricky) use class for prototypal inheritance
+
 function Shape(name) {
   this.name = name;
 }
@@ -31,12 +33,14 @@ Circle.prototype = Object.create(Shape.prototype);
 
 // Set prototype constructors
 Rectangle.prototype.constructor = Rectangle;
-Rectangle.prototype.constructor = Rectangle;
+Circle.prototype.constructor = Circle;
 
 const rect = new Rectangle('Rectangle 1', 20, 20);
 const cir = new Circle('Circle 1', 30);
 
-// console.log(rect, cir);
+console.log(rect, cir);
 
 rect.logName();
 cir.logName();
+
+console.log(cir.constructor);
