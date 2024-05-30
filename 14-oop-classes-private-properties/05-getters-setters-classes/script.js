@@ -30,10 +30,10 @@ class Person {
 }
 
 const person1 = new Person('john', 'doe');
-console.log(person1.firstName);
+console.log(person1.firstName); //getter
 console.log(person1.lastName);
 
-person1.firstName = 'joe';
+person1.firstName = 'joe'; //setter
 person1.lastName = 'smith';
 console.log(person1.fullName);
 console.log(person1);

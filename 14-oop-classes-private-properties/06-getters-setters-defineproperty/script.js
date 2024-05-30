@@ -1,3 +1,5 @@
+// skip this (tricky)
+
 // Constructor Function
 function Person(firstName, lastName) {
   this._firstName = firstName;
@@ -32,8 +34,17 @@ Person.prototype.capitalizeFirst = function (value) {
   return value.charAt(0).toUpperCase() + value.slice(1);
 };
 
+const person1 = new Person('john', 'doe');
+console.log(person1.firstName); //getter
+console.log(person1.lastName);
+console.log(person1.fullName);
+
+person1.firstName = 'nikhil'; //setter
+person1.lastName = 'khetan';
+console.log(person1.fullName);
+
 // Object Literal
-const PersonObj = {
+const personObj = {
   _firstName: 'jane',
   _lastName: 'doe',
 
@@ -58,12 +69,7 @@ const PersonObj = {
   },
 };
 
-const person1 = new Person('john', 'doe');
-console.log(person1.firstName);
-console.log(person1.lastName);
-console.log(person1.fullName);
-
-const person2 = Object.create(PersonObj);
+const person2 = Object.create(personObj);
 console.log(person2.firstName);
 console.log(person2.lastName);
 console.log(person2.fullName);
