@@ -1,5 +1,6 @@
 class Wallet {
   constructor() {
+    // console.log('run');
     this._balance = 0;
     this._transactions = [];
   }
