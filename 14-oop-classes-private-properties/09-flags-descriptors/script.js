@@ -7,7 +7,7 @@ Math.PI = 4;
 console.log(Math.PI);
 
 let descriptor = Object.getOwnPropertyDescriptor(Math, 'PI');
-// console.log(descriptor);
+console.log(descriptor);
 
 const rectObj = {
   name: 'Rectangle 1',
@@ -26,6 +26,7 @@ console.log(descriptor);
 
 rectObj.name = 'New Name';
 delete rectObj.name;
+// delete rectObj.width;
 
 console.log(rectObj);
 
