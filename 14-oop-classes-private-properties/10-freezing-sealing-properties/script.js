@@ -42,4 +42,4 @@ console.log(descriptors);
 console.log('rectObj is sealed?', Object.isSealed(rectObj));
 console.log('rectObj is frozen?', Object.isFrozen(rectObj));
 console.log('circleObj is sealed?', Object.isSealed(circleObj));
-console.log('circleObj is frozen?', Object.isSealed(circleObj));
+console.log('circleObj is frozen?', Object.isFrozen(circleObj));

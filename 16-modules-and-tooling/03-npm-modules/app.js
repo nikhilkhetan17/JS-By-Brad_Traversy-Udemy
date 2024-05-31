@@ -6,3 +6,6 @@ async function getPost() {
 }
 
 getPost();
+
+// npm start
+// npm run dev
